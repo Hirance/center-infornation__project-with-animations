@@ -1,3 +1,11 @@
+.fixed-scroll {
+  overflow: hidden;
+}
+
+#adaptive-popup {
+  display: none;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -16,6 +24,9 @@
 }
 .header .header__logo {
   margin-right: 194px;
+}
+.header .header__adaptive-menu-btn {
+  display: none;
 }
 
 @font-face {
@@ -254,6 +265,71 @@ body {
     top: 130px;
     left: -260px;
   }
+
+  .navigation {
+    display: none;
+  }
+
+  .header {
+    align-items: center;
+  }
+
+  .header .header__adaptive-menu-btn {
+    display: block;
+    padding-right: 26px;
+    padding-left: 26px;
+  }
+
+  #adaptive-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 115px 30px 90px;
+    box-sizing: border-box;
+    background: #409AD4;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    transform: translateY(0);
+    transition: 0.3s;
+  }
+  #adaptive-popup.adaptive-popup__hidden {
+    transform: translateY(-100%);
+  }
+  #adaptive-popup .adaptive-popup__navigation-list .adaptive-popup__navigation-item {
+    margin-bottom: 40px;
+  }
+  #adaptive-popup .adaptive-popup__navigation-list .adaptive-popup__navigation-item:last-child {
+    margin-bottom: 0;
+  }
+  #adaptive-popup .adaptive-popup__navigation-list .adaptive-popup__navigation-item a {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  #adaptive-popup .adaptive-popup__media {
+    display: flex;
+    flex-direction: column;
+  }
+  #adaptive-popup .adaptive-popup__media .adaptive-popup__media-text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  #adaptive-popup .adaptive-popup__media .adaptive-popup__media-text.mt-24 {
+    margin-top: 24px;
+  }
+  #adaptive-popup .adaptive-popup__media .adaptive-popup__media-text.mt-14 {
+    margin-top: 14px;
+  }
+  #adaptive-popup .adaptive-popup__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
 }
 .main {
   position: relative;
@@ -386,7 +462,7 @@ body {
   justify-content: space-between;
   position: relative;
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity 0.3s;
 }
 .main-page .main-page__info.notVisible {
   opacity: 0;
@@ -488,7 +564,7 @@ body {
 .main-page__news {
   display: flex;
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 0.3s;
   justify-content: space-between;
   align-items: center;
   z-index: -1;

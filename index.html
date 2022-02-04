@@ -8,12 +8,38 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+<!-- попап для адаптивной версии хедера, нужен визде -->
+<div id="adaptive-popup" class="adaptive-popup__hidden">
+    <nav class="adaptive-popup__navigation">
+        <ul class="adaptive-popup__navigation-list">
+            <li class="adaptive-popup__navigation-item">
+                <a href="#">Региональная сеть</a>
+            </li>
+            <li class="adaptive-popup__navigation-item">
+                <a href="#">наши партнеры</a>
+            </li>
+            <li class="adaptive-popup__navigation-item">
+                <a href="#">пресс-центр</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="adaptive-popup__media">
+        <a href="#" class="adaptive-popup__media-text">+7 (4872) 52 05 02</a>
+        <a href="#" class="adaptive-popup__media-text mt-24">levsha@sm.news</a>
+        <p class="adaptive-popup__media-text mt-14">Тула, ул. Михеева, 17, офис 306</p>
+    </div>
+    <div class="adaptive-popup__close">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.9707 12.5L24.6848 1.78592C25.1051 1.36564 25.1051 0.693579 24.6848 0.31521C24.2645 -0.0628664 23.5924 -0.10507 23.2141 0.31521L12.5 11.0293L1.78592 0.31521C1.36564 -0.10507 0.693579 -0.10507 0.31521 0.31521C-0.10507 0.73549 -0.10507 1.40755 0.31521 1.78592L11.0293 12.5L0.31521 23.2141C-0.10507 23.6344 -0.10507 24.3064 0.31521 24.6848C0.73549 25.1051 1.40755 25.1051 1.78592 24.6848L12.5 13.9707L23.2141 24.6848C23.6344 25.1051 24.3064 25.1051 24.6848 24.6848C25.1051 24.2645 25.1051 23.5924 24.6848 23.2141L13.9707 12.5Z" fill="white"/>
+        </svg>
+    </div>
+</div>
 
 <div class="wrapper">
     <header class="header">
         <div class="header__content">
             <div class="header__logo">
-                <a href="#" class="logo">
+                <a href="../index.html" class="logo">
                     <svg width="78" height="100" viewBox="0 0 78 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M77.1509 35.3248C76.9199 34.8732 76.6154 34.7367 76.1638 34.9257C75.5443 35.1778 74.9352 35.4508 74.3261 35.7238C72.8245 36.3749 71.3334 37.0364 69.8317 37.6875C69.7162 37.761 69.5797 37.7925 69.4537 37.866C67.6475 38.6641 65.8309 39.4622 63.9407 40.2917C64.2977 38.5486 64.6127 36.9314 64.9488 35.3248C65.3268 33.4976 65.7153 31.6704 66.1144 29.8433C66.1774 29.5492 66.1774 29.2762 65.9569 29.0662C65.6943 28.8247 65.4003 28.8142 65.0853 28.9717C63.9722 29.5282 62.8591 30.0848 61.7355 30.6098C60.8114 31.0509 59.9188 31.5654 58.9632 31.933C58.9527 31.9015 58.9527 31.8595 58.9422 31.828C58.8687 31.8595 58.8057 31.912 58.7532 31.975C58.7007 31.996 58.6587 32.017 58.6062 32.0275C58.3542 32.143 58.1126 32.269 57.9236 32.4685C56.779 33.0356 55.6344 33.6026 54.4898 34.1802C53.6182 34.6212 52.7046 34.9992 51.8541 35.5033C51.6545 35.5873 51.4235 35.5873 51.2765 35.7763C51.1925 35.8183 51.098 35.8603 51.014 35.9023C50.8775 35.8918 50.7725 35.9548 50.699 36.0703C50.3734 36.2174 50.0269 36.3329 49.7119 36.5009C49.3128 36.7004 49.1868 37.1519 49.3863 37.4985C49.5964 37.866 49.9744 37.95 50.3944 37.7295C50.594 37.6245 50.7935 37.5405 50.9825 37.446C51.8751 37.0259 52.7572 36.5954 53.6497 36.1754C53.8493 36.1544 54.0173 36.0808 54.1328 35.9128C54.6788 35.6398 55.2249 35.3668 55.7709 35.0938C58.2492 33.8756 60.7379 32.6575 63.2266 31.4499C63.6152 31.2609 63.9827 30.9984 64.4762 30.9039C64.0142 33.1406 63.5731 35.3143 63.1216 37.4985C63.0271 37.719 62.9431 37.929 62.9536 38.1705C62.7436 39.1996 62.5336 40.2287 62.334 41.2683C62.1975 41.9614 62.6911 42.3814 63.3526 42.1084C64.0772 41.8144 64.7703 41.4678 65.4843 41.1528C66.2719 40.8063 67.0595 40.4808 67.847 40.1447C68.0151 40.0607 68.1726 39.9662 68.3406 39.8927C69.2857 39.4832 70.2203 39.0736 71.1654 38.6536C72.835 37.9185 74.5047 37.2045 76.1638 36.4484C76.5313 36.2804 77.0354 36.2279 77.1719 35.7133C77.2139 35.5768 77.2244 35.4508 77.1509 35.3248Z"
                               fill="white"/>
@@ -69,27 +95,29 @@
                 </div>
             </div>
         </div>
+        <div class="header__adaptive-menu-btn btn">
+            меню
+        </div>
         <nav class="navigation">
             <ul class="navigation__list">
                 <li class="navigation__item">
-                    <a href="page-region/index.html" class="btn">
+                    <a href="#" class="btn">
                         Региональная сеть
                     </a>
                 </li>
                 <li class="navigation__item">
-                    <a href="page-liga/index.html" class="btn">
+                    <a href="#" class="btn">
                         наши партнеры
                     </a>
                 </li>
                 <li class="navigation__item">
-                    <a href="page-partners/index.html" class="btn">
+                    <a href="#" class="btn">
                         пресс-центр
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
-
 
     <main class="main">
         <section class="video-section">
@@ -618,10 +646,12 @@
     </footer>
 
 </div>
+<!-- библиотеки для анимаций-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/MotionPathPlugin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
 
+<script src="dependencies/header.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -9,6 +9,33 @@
 </head>
 <body>
 
+<!-- попап для адаптивной версии хедера, нужен визде -->
+<div id="adaptive-popup" class="adaptive-popup__hidden">
+    <nav class="adaptive-popup__navigation">
+        <ul class="adaptive-popup__navigation-list">
+            <li class="adaptive-popup__navigation-item">
+                <a href="#">Региональная сеть</a>
+            </li>
+            <li class="adaptive-popup__navigation-item">
+                <a href="#">наши партнеры</a>
+            </li>
+            <li class="adaptive-popup__navigation-item">
+                <a href="#">пресс-центр</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="adaptive-popup__media">
+        <a href="#" class="adaptive-popup__media-text">+7 (4872) 52 05 02</a>
+        <a href="#" class="adaptive-popup__media-text mt-24">levsha@sm.news</a>
+        <p class="adaptive-popup__media-text mt-14">Тула, ул. Михеева, 17, офис 306</p>
+    </div>
+    <div class="adaptive-popup__close">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.9707 12.5L24.6848 1.78592C25.1051 1.36564 25.1051 0.693579 24.6848 0.31521C24.2645 -0.0628664 23.5924 -0.10507 23.2141 0.31521L12.5 11.0293L1.78592 0.31521C1.36564 -0.10507 0.693579 -0.10507 0.31521 0.31521C-0.10507 0.73549 -0.10507 1.40755 0.31521 1.78592L11.0293 12.5L0.31521 23.2141C-0.10507 23.6344 -0.10507 24.3064 0.31521 24.6848C0.73549 25.1051 1.40755 25.1051 1.78592 24.6848L12.5 13.9707L23.2141 24.6848C23.6344 25.1051 24.3064 25.1051 24.6848 24.6848C25.1051 24.2645 25.1051 23.5924 24.6848 23.2141L13.9707 12.5Z" fill="white"/>
+        </svg>
+    </div>
+</div>
+
 <div class="wrapper">
     <header class="header">
         <div class="header__content">
@@ -68,6 +95,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="header__adaptive-menu-btn btn">
+            меню
         </div>
         <nav class="navigation">
             <ul class="navigation__list">
@@ -481,5 +511,6 @@
     </footer>
 </div>
 
+<script src="../dependencies/header.js"></script>
 </body>
 </html>
