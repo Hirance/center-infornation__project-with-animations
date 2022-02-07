@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    $('.main-top__circle')[0].classList.add('open')
+
     $('.partners-slider').slick({
         centerMode: true,
         centerPadding: '7.5%',

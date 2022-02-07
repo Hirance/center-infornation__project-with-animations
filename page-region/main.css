@@ -372,6 +372,11 @@ body {
   border-radius: 50%;
   right: -445px;
   z-index: 0;
+  transition: 0.7s;
+  transform: scale(0);
+}
+.main-info .main-info-top .main-top__circle.open {
+  transform: scale(1);
 }
 .main-info .main-info-top .main-top__title {
   font-family: "Montserrat-Medium", sans-serif;

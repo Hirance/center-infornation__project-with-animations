@@ -41,6 +41,12 @@ body {
       border-radius: 50%;
       right: -445px;
       z-index: 0;
+      transition: .7s;
+      transform: scale(0);
+      &.open {
+        transform: scale(1);
+
+      }
     }
 
     .main-top__title {
