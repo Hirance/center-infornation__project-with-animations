@@ -1,19 +1,40 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".main-page__news-container",
-        // markers: true,
-        start: "top 0",
-        end: "bottom 100%",
-        scrub: 1,
+const createCirclesAnimation = () => {
+    if(window.innerWidth < 425 ) {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".main-page__news-container",
+                // markers: true,
+                start: "top 0",
+                end: "bottom 100%",
+                scrub: 1,
+            }
+        });
+
+        tl.to(".news__circle.fst", {x: 0, duration: 20})
+            .to(".news__circle.scd", {x: -1000, duration: 20})
+            .to(".news__circle.thrd", {x: -1100, duration: 20})
+
+        return
     }
-});
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".main-page__news-container",
+            // markers: true,
+            start: "top 0",
+            end: "bottom 100%",
+            scrub: 1,
+        }
+    });
 
-tl.to(".news__circle.fst", {x: -100, duration: 20})
-    .to(".news__circle.scd", {x: -1000, duration: 20})
-    .to(".news__circle.thrd", {x: -1000, duration: 20})
+    tl.to(".news__circle.fst", {x: -100, duration: 20})
+        .to(".news__circle.scd", {x: -1000, duration: 20})
+        .to(".news__circle.thrd", {x: -1000, duration: 20})
 
+}
+
+createCirclesAnimation()
 
 //Fixed animation
 
@@ -63,7 +84,6 @@ ScrollTrigger.create({
         mainNews.classList.remove('visible')
         mainInfo.classList.remove('notVisible')
     },
-
 })
 
 //video
@@ -75,7 +95,6 @@ ScrollTrigger.create({
     start: "10% 0%",
     end: "bottom 50%",
     //markers: true,
-    scrub: true,
     onEnter: () => {
         videoText.classList.add('added')
     },

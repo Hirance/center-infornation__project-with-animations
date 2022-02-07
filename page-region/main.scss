@@ -15,6 +15,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
+
 .main {
   overflow-x: hidden;
 }
@@ -24,11 +25,13 @@ body {
 
   .main-info-top {
     position: relative;
+
     .main-top__svg {
       position: absolute;
       right: 225px;
       top: 15px;
     }
+
     .main-top__circle {
       position: absolute;
       background: #409AD4;
@@ -39,6 +42,7 @@ body {
       right: -445px;
       z-index: 0;
     }
+
     .main-top__title {
       font-family: "Montserrat-Medium", sans-serif;
       font-size: 40px;
@@ -61,6 +65,7 @@ body {
       margin-bottom: 395px;
       z-index: 1;
       position: relative;
+
       .part__title {
         font-family: "Montserrat-Bold", sans-serif;
         font-size: 80px;
@@ -82,6 +87,7 @@ body {
         height: 136px;
         background: white;
       }
+
       .right-part {
         .part__title {
           color: white;
@@ -94,6 +100,7 @@ body {
     display: flex;
     position: relative;
     z-index: 1;
+
     .bottom-quotes {
       font-family: "Montserrat-Bold", sans-serif;
       font-size: 110px;
@@ -103,6 +110,7 @@ body {
       color: #409AD4;
       margin-right: 40px;
     }
+
     .bottom-text {
       font-family: "Montserrat-SemiBold", sans-serif;
       font-size: 30px;
@@ -277,7 +285,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1440px) {
   .main-info, .media-kits, .main-partners .partners-top {
     padding-left: 20px;
     padding-right: 20px;
@@ -293,7 +301,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .main-info .main-info-top .main-top__svg {
     position: absolute;
     right: 50px;
@@ -304,6 +312,7 @@ body {
   }
   .main-info .main-info-top .main-top__description {
     max-width: 515px;
+    font-size: 14px;
   }
   .media-kits .media-kits__blocks .media-kits__block .block-content .block-content__left {
     max-width: 220px;
@@ -329,8 +338,8 @@ body {
   }
 }
 
-@media screen and (max-width: 768px){
-  .main-info .main-info-top .main-top__svg,.main-info .main-info-top .main-top__circle {
+@media screen and (max-width: 768px) {
+  .main-info .main-info-top .main-top__svg, .main-info .main-info-top .main-top__circle {
     display: none;
   }
   .main-info .main-info-top .main-top__description {
@@ -350,21 +359,31 @@ body {
   }
 }
 
-@media screen and (max-width: 425px){
-  .main-info .main-info-top .main-top__svg,.main-info .main-info-top .main-top__circle {
+@media screen and (max-width: 425px) {
+  .main-info .main-info-top .main-top__parts .right-part .part__title {
+    color: #409AD4;
+  }
+  .main-info .main-info-top .main-top__parts .part__description {
+    font-size: 16px;
+  }
+  .main-info .main-info-top .main-top__parts .part__title {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .main-info .main-info-top .main-top__svg, .main-info .main-info-top .main-top__circle {
     display: none;
   }
   .main-info .main-info-top .main-top__description {
     max-width: 100%;
   }
-  .main-info .main-info-top .main-top__parts{
+  .main-info .main-info-top .main-top__parts {
     flex-direction: column;
   }
   .main-info .main-info-top .main-top__parts .line {
     display: none;
   }
   .main-info .main-info-top .main-top__parts .left-part {
-  margin-bottom: 20px;
+    margin-bottom: 60px;
   }
   .main-info .main-info-bottom .bottom-quotes {
     display: none;
@@ -381,9 +400,29 @@ body {
     right: -92px;
   }
   .main-info .main-info-top .main-top__title {
-    font-size: 30px;
+    font-size: 24px;
   }
+  .main-info .main-info-bottom .bottom-text {
+    font-size: 16px;
+  }
+  .media-kits {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .media-kits .media-kits__blocks .media-kits__block {
+    .block-circle {
+      transform: scale(6);
+    }
 
+    .block-content .block-content__right .block-content__right_image {
+      opacity: 1;
+    }
+
+    color: #1E1E1E;
+  }
+  .main {
+    padding-bottom: 60px;
+  }
 }
 
 

@@ -338,6 +338,10 @@ body {
   overflow-x: hidden;
 }
 
+.video .video-container {
+  box-sizing: border-box;
+}
+
 .video {
   position: relative;
   height: 974px;
@@ -362,8 +366,8 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 300px;
+  right: 0;
   z-index: 10;
   display: block !important;
 }
@@ -491,6 +495,9 @@ body {
 .main-page .main-page__info .main-page__block {
   display: flex;
   flex-direction: column;
+}
+.main-page .main-page__info .main-page__block.adaptive {
+  display: none;
 }
 .main-page .main-page__info .main-page__block .line-container {
   width: 368px;
@@ -985,23 +992,53 @@ body {
   }
 }
 @media screen and (max-width: 425px) {
+  .main-page .main-page__info .main-page__block.line {
+    display: none;
+  }
+
+  .main-page .main-page__info .main-page__block.adaptive {
+    display: block;
+  }
+
+  .main-page .main-page__info .main-page__block .circle.blue.adaptive-hidden {
+    display: none;
+  }
+
+  .main-page .main-page__info .main-page__block .circle.empty {
+    display: none;
+  }
+
   .container .text-box {
-    font-size: 80px;
+    font-size: 155px;
+    word-break: break-all;
+    padding-top: 129px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .main-page__news .news__circles {
     position: absolute;
   }
 
+  .main-page .main-page__info .main-page__block {
+    flex-direction: row;
+  }
+
   .main-page .main-page__info .main-page__block .circle {
-    width: 110px;
-    height: 110px;
-    padding: 20px;
+    width: 172px;
+    height: 172px;
+    padding: 43px 10px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .main-page .main-page__info .main-page__block .circle__discription {
-    font-size: 8px;
+    font-size: 12px;
+    line-height: 130%;
   }
 
   .main-page .main-page__info .main-page__block .line-container {
@@ -1009,12 +1046,125 @@ body {
   }
 
   .main-page .main-page__info .main-page__block .circle__title {
-    font-size: 37px;
+    font-size: 48px;
+  }
+
+  .video, .container {
+    height: 650px;
+  }
+
+  .video .video-container .video__content .video__description {
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  .video .video-container {
+    padding-bottom: 40px;
+  }
+
+  .video .video-container .video__content .video__more a {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .video .video-container .video__small-text {
+    top: 427px;
+    left: unset;
+    right: 14px;
+  }
+
+  .video .video-container .video__content {
+    padding-top: 24px;
+  }
+
+  .video .video-container .video__content .video__description {
+    margin-bottom: 30px;
+  }
+
+  .main-page .main-page__info {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .main-page .main-page__info.fixed {
+    width: calc(100% - 30px);
+  }
+
+  .main-page .main-page__info {
+    width: calc(100% - 30px);
+    height: unset;
+  }
+
+  .main-page .main-page__info .main-page__arrows {
+    bottom: -100px;
+  }
+
+  .main-page__news .news__content .news__content_title {
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 16px;
+  }
+  .main-page__news .news__content .news__content_title br {
+    display: none;
+  }
+
+  .main-page__news .news__content {
+    max-width: 100%;
+  }
+
+  .main-page__news.fixed {
+    width: calc(100% - 30px);
+    top: 0;
+    bottom: 10px;
+  }
+
+  .main-page .main-page__news {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .main-page__news .news__circles {
+    width: 345px;
+    height: 345px;
+    bottom: 10px;
+    left: 0;
+  }
+
+  .main-page__news.adapted-end {
+    bottom: 10px;
+  }
+
+  .main-page__news .news__content {
+    height: 100vh;
+    padding-top: 20px;
+  }
+
+  .main-page__news .news__circles .news__circle .news__circle_text {
+    text-align: center;
+  }
+
+  .main-page__news .news__content .news__content_description {
+    font-size: 14px;
+  }
+
+  .header {
+    padding: 15px;
+  }
+
+  .video-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .main-map__left .main-map__left_title {
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 375px) {
   .container .text-box {
-    font-size: 70px;
+    font-size: 135px;
   }
 }
 
