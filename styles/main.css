@@ -1028,7 +1028,7 @@ body {
     width: 172px;
     height: 172px;
     padding: 43px 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -1105,6 +1105,7 @@ body {
     font-size: 24px;
     line-height: 120%;
     margin-bottom: 16px;
+    padding-top: 50px;
   }
   .main-page__news .news__content .news__content_title br {
     display: none;
@@ -1160,6 +1161,11 @@ body {
 
   .main-map__left .main-map__left_title {
     font-size: 24px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .container .text-box {
+    font-size: 140px;
   }
 }
 @media screen and (max-width: 375px) {
