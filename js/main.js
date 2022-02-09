@@ -88,16 +88,27 @@ ScrollTrigger.create({
 
 //video
 
+let test = document.querySelector('.video-box-hover')
 let videoText =document.querySelector('.text-box')
 
-ScrollTrigger.create({
-    trigger: ".video-section",
-    start: "10% 0%",
-    end: "bottom 50%",
-    //markers: true,
-    onEnter: () => {
-        videoText.classList.add('added')
-    },
-})
+test.addEventListener("mouseenter", function( event ) {
+    videoText.classList.add('added')
+}, false);
+
+test.addEventListener("mouseleave", function( event ) {
+    videoText.classList.remove('added')
+}, false);
+
+
+//
+// ScrollTrigger.create({
+//     trigger: ".video-section",
+//     start: "10% 0%",
+//     end: "bottom 50%",
+//     //markers: true,
+//     onEnter: () => {
+//         videoText.classList.add('added')
+//     },
+// })
 
 //end
